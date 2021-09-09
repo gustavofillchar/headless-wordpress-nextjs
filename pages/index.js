@@ -39,7 +39,7 @@ export default function Index({ allPosts: { edges }, preview }) {
 export async function getStaticProps({ preview = false }) {
   const allPosts = await getAllPostsForHome(preview)
   return {
-    revalidate: 1,
+    revalidate: 60,
     props: { allPosts, preview },
   }
 }

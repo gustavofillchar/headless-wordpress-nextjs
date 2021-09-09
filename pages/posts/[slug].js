@@ -65,7 +65,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPostAndMorePosts(params.slug, preview, previewData)
 
   return {
-    revalidate: 1,
+    revalidate: 60,
     props: {
       preview,
       post: data.post,
